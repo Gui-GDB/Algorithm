@@ -382,3 +382,7 @@ BigDecimal c = a.divide(b, 2, BigDecimal.ROUND_HALF_UP);
 a = a.setScale(2, BigDecimal.ROUND_DOWN);
 ```
 
+# 一些细节
+
+## 保留几位小数的问题
+

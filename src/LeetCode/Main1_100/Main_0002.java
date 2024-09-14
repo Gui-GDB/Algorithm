@@ -1,4 +1,4 @@
-package Main1_100;
+package LeetCode.Main1_100;
 
 //Definition for singly-linked list.
 class ListNode {
