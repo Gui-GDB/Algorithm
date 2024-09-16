@@ -3,7 +3,7 @@ package LeetCode.Main1_100;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main_0001 {
+public class Main0001 {
     public static void main(String[] args) {
 
     }

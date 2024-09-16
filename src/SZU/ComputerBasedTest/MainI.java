@@ -29,7 +29,7 @@ package SZU.ComputerBasedTest;/*
     0
 
  */
-//todo 机考的时候没有做
+//todo 机考的时候只通过了一个测试样例
 import java.util.*;
 
 public class MainI {

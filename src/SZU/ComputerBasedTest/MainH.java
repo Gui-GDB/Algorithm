@@ -40,7 +40,7 @@ package SZU.ComputerBasedTest;/*
     4 3
     ----
  */
-//todo 机考的时候没有做
+//todo 机考的时候没有做出来
 
 import java.util.Scanner;
 

@@ -2,7 +2,7 @@ package LeetCode.Main1_100;
 
 import java.util.*;
 
-public class Main_0006 {
+public class Main0006 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
