@@ -19,7 +19,7 @@ class ListNode {
 }
 
 
-public class Main_0002 {
+public class Main0002 {
     public static void main(String[] args) {
 
     }

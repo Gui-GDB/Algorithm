@@ -1,3 +1,76 @@
+## Java 变量的初始化规则总结：
+
+1. **局部变量**（定义在方法、构造函数或代码块内的变量）：
+
+   - **不会自动初始化**，必须手动赋值后才能使用。
+   - **如果在使用前未赋值，编译时会报错。**
+
+   示例：
+
+   ```java
+   public void method() {
+       int x;  // 局部变量
+       System.out.println(x);  // 编译错误，x 未初始化
+   }
+   ```
+
+2. **成员变量**（类的实例变量，定义在类内、方法外的变量）：
+
+   - 会被**自动初始化**为默认值。
+   - 默认值取决于变量的类型：
+     - 基本数据类型：`0`（数值型）、`false`（布尔型）、`'\u0000'`（字符型）。
+     - 引用类型：`null`。
+
+   示例：
+
+   ```java
+   public class MyClass {
+       int x;  // 实例变量，自动初始化为 0
+       String str;  // 实例变量，自动初始化为 null
+   }
+   ```
+
+3. **静态变量**（类的静态字段，使用 `static` 修饰）：
+
+   - 和成员变量类似，**会自动初始化**为默认值。
+   - 初始化时机是在类加载时，默认值与成员变量相同。
+
+   示例：
+
+   ```java
+   public class MyClass {
+       static int x;  // 静态变量，自动初始化为 0
+       static String str;  // 静态变量，自动初始化为 null
+   }
+   ```
+
+4. **数组变量**：
+
+   - 数组本身是引用类型，声明后如果不初始化，数组引用为 `null`。
+   - 一旦使用 `new` 创建数组，则**数组的每个元素**都会被自动初始化：
+     - 对于基本数据类型的数组，元素会被初始化为相应的默认值（如 `int[]` 的元素为 `0`）。
+     - 对于引用类型数组，元素会被初始化为 `null`。
+     - 
+
+   示例：
+
+   ```java
+   public void method() {
+       int[] arr = new int[5];  // 数组元素自动初始化为 0
+       System.out.println(arr[0]);  // 输出 0
+       Arrays.fill(arr, 42); // 数组所有元素初始化为42
+       System.out.println(arr[0]);  // 输出 42
+   }
+   ```
+
+### 总结：
+
+- **局部变量**：不会自动初始化，必须手动赋值。
+- **成员变量**和**静态变量**：会自动初始化为类型的默认值。
+- **数组**：数组元素会自动初始化为类型的默认值，但数组引用变量需要手动赋值（用 `new` 关键字）。
+
+------
+
 ## 数学问题
 
 ### [最大公约数和最小公倍数](https://blog.csdn.net/weixin_51585785/article/details/119492687?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-119492687-blog-25077167.235^v38^pc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-119492687-blog-25077167.235^v38^pc_relevant_default_base3&utm_relevant_index=2)
@@ -385,4 +458,3 @@ a = a.setScale(2, BigDecimal.ROUND_DOWN);
 # 一些细节
 
 ## 保留几位小数的问题
-
