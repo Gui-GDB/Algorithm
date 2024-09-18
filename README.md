@@ -7,9 +7,12 @@
 ```
 |--- LeetCode/(根目录)
 	 |--- resources/(参考资料)
+	      |--- image/(存放文档中的图片)
 	      |--- Java算法基础知识.md(一些Java算法基础知识)
 	      |--- 常见的一些题型.md(一些常见的算法模板的汇总)
 	 |--- src/(源代码)
+	      |--- algorithmTemplate(一些常见的算法模板)
+	           |--- Sort(十大经典排序算法模板)
 	      |--- LeetCode(https://leetcode.cn/)
 	           |--- Main1_100/(LeetCode第1到100题)
 	           |--- Main101_200(LeetCode第101到200题)
