@@ -1,9 +1,41 @@
 package algorithmTemplate;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Sort {
+
+    public static void main(String[] args) {
+        int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] ints = mergeSort(arr, 0, arr.length - 1);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    /**
+     * 归并排序实现升序排序算法
+     * 首先就是通过递归的方式将数据划分成一个一个的元素，然后通过归并的方法将数组排序。
+     *
+     * @param arr   带排序的数组
+     * @param left  目标数组待排序的左指针
+     * @param right 目标数组待排序的右指针
+     * @return 返回归并后的有序数组
+     */
+    public static int[] mergeSort(int[] arr, int left, int right) {
+        if (left == right)
+            return new int[]{arr[left]};
+        int mid = left + right >> 1;
+        int[] leftArr = mergeSort(arr, left, mid);
+        int[] rightArr = mergeSort(arr, mid + 1, right);
+        int[] mergeArr = new int[leftArr.length + rightArr.length];
+
+        int index = 0, i = 0, j = 0;
+        while (i < leftArr.length && j < rightArr.length)
+            mergeArr[index++] = leftArr[i] <= rightArr[j] ? leftArr[i++] : rightArr[j++];
+        while (i < leftArr.length)
+            mergeArr[index++] = leftArr[i++];
+        while (j < rightArr.length)
+            mergeArr[index++] = rightArr[j++];
+        return mergeArr;
+    }
 
     /**
      * 快速排序实现升序排序
@@ -68,16 +100,5 @@ public class Sort {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = 100000;
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-        quickSort2(arr, 0, n - 1);
-        System.out.println(Arrays.toString(arr));
     }
 }
