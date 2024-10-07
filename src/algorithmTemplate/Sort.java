@@ -2,12 +2,63 @@ package algorithmTemplate;
 
 import java.util.Arrays;
 
+/**
+ * 可以利用LeetCode上的第912题来练习自己写的排序算法是否正确
+ */
 public class Sort {
 
     public static void main(String[] args) {
-        int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-        int[] ints = mergeSort(arr, 0, arr.length - 1);
-        System.out.println(Arrays.toString(ints));
+        int[] arr = {110, 100, 0};
+        insertionSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    /**
+     * 插入排序实现升序排序，
+     *
+     * @param arr 待排序的数组
+     */
+    public static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                int temp = arr[i], j;
+                for (j = i - 1; j >= 0 && arr[j] > temp; j--)
+                    arr[j + 1] = arr[j];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    /**
+     * 选择排序实现升序排序
+     *
+     * @param arr 待排序的数组
+     */
+    public static void selectionSort(int[] arr) {
+        int min;
+        for (int i = 0; i < arr.length; i++) {
+            min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[min])
+                    min = j;
+            }
+            swap(arr, i, min);
+        }
+    }
+
+    /**
+     * 冒泡排序实现升序排序
+     *
+     * @param arr 待排序的数组
+     */
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                }
+            }
+        }
     }
 
     /**
