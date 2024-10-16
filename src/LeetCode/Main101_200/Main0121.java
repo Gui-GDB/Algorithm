@@ -1,6 +1,6 @@
 package LeetCode.Main101_200;
 
-public class Main0112 {
+public class Main0121 {
     public static int maxProfit(int[] prices) {
         int res = 0;
         int buyPrice = prices[0];

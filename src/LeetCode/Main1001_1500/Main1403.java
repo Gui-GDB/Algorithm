@@ -1,7 +1,6 @@
-package LeetCode.Main1101_1500;
+package LeetCode.Main1001_1500;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 

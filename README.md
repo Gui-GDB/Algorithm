@@ -5,7 +5,7 @@
 ## 目录结构
 
 ```
-|--- LeetCode/(根目录)
+|--- Algorithm/(根目录)
 	 |--- resources/(参考资料)
 	      |--- image/(存放文档中的图片)
 	      |--- Java算法基础知识.md(一些Java算法基础知识)
@@ -14,6 +14,7 @@
 	      |--- algorithmTemplate(一些常见的算法模板)
 	           |--- Sort(十大经典排序算法模板)
 	      |--- LeetCode(https://leetcode.cn/)
+	           |--- InterviewQuestions/(Leetcode面试题)
 	           |--- Main1_100/(LeetCode第1到100题)
 	           |--- Main101_200(LeetCode第101到200题)
 	           |--- Main201_500(LeetCode第201到500题)

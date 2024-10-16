@@ -1,4 +1,4 @@
-package LeetCode.Main1101_1500;
+package LeetCode.Main1001_1500;
 
 public class Main1491 {
     /**
